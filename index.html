@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beckhoff STRUCT to JSON by chatgpt & phobic</title>
+    <link href='https://phobic.no/chatgpt/test2/Mona-Sans.woff2' rel='stylesheet' type='text/css'>
+    <style>
+            * {
+        font-family: 'Mona-Sans', sans-serif;
+    }
+    h1, h2 {
+        font-family: 'Mona-Sans', sans-serif;
+    }
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    body > * {
+        width: 70%;
+        left: 15%;
+        right: 15%;
+    }
+    .textarea {
+        height: 200px;
+    }
+    .jsoncrack {
+        height: 500px;
+    }
+    .padding {
+        padding: 20px;
+    }
+    .margin {
+        margin: 20px;
+    }
+    .textareas-container {
+    display: flex;
+    flex-direction: row;
+    }
+    .textarea-left, .textarea-right {
+        flex-basis: 50%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="margin"><h2>Beckhoff STRUCT to JSON</h2>
+    by chatgpt & phobic</div>
+
+    <input type="file" id="file-input" onchange="loadFile();jsonCrackEmbed.js;">
+
+    <div class="textareas-container">
+        <textarea class="textarea-left padding margin height textarea" id="file-text"></textarea>
+        <textarea class="textarea-right padding margin height textarea" id="json-text" ></textarea>
+    </div>
+
+    <button class="padding" id="copy-button" onclick="copyCode()">Copy Code</button>
+
+    <iframe class="margin jsoncrack" id="jsoncrackEmbed" src="https://jsoncrack.com/widget"></iframe>
+
+    </body>
+
+<script>
+</script>
+    <script src="loadFile.js"></script>
+    <script src="parseXMLtoJSON.js"></script>
+    <script src="textToJSON.js"></script>
+    <script src="sendToEmbed.js"></script>
+</html>
