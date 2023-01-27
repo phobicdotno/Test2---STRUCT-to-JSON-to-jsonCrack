@@ -11,7 +11,6 @@ function textToJSON(text) {
             json[currentStruct] = {};
         } else if (line.startsWith("{") && line.endsWith("}")) {
             attribute = line.substring(1, line.length - 1);
-            attribute = attribute.replace(/[^a-zA-Z0-9\s]/g, "");
             json[currentStruct]["atribdisplay"] = attribute;
         } else if (line.endsWith(";")) {
             const parts = line.split(':');
@@ -32,4 +31,10 @@ function textToJSON(text) {
         }
     }
     return json;
+}
+
+// Takes away all special chars
+function onlyText(text) {
+    let onlyText = text.replace(/[^a-zA-Z0-9\s]/g, "");
+    return onlyText;
 }
